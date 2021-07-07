@@ -25,4 +25,4 @@ echo 13 | gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname NA -nname 
 
 ####Energy minimization.
 gmx grompp -f mdp/mini.mdp -c solv_ions.gro -p topol.top -o em.tpr
-gmx mdrun -cpi -append -cpt 2 -s em.tpr -deffnm em
+gmx mdrun -v -s em.tpr -deffnm em
