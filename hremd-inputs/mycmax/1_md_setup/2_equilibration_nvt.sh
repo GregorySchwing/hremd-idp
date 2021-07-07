@@ -7,4 +7,4 @@
 
 ####NVT equilibration.
 gmx grompp -f mdp/nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr
-gmx mdrun -cpi -append -cpt 5 -s nvt.tpr -deffnm nvt
+gmx mdrun -cpt 5 -s nvt.tpr -deffnm nvt
