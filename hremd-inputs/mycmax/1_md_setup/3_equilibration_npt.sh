@@ -6,9 +6,10 @@
 ####If one is new to gromacs and encounters errors/problems, refer to an excellent tutorial by Justin Lemkul (http://www.mdtutorials.com/gmx/).
 
 ####NPT equilibration.
-gmx grompp -f mdp/npt.mdp -c nvt.gro -r nvt.gro -p topol.top -o npt.tpr
-# gmx mdrun -append -cpt 5 -s npt.tpr -deffnm npt
+# For velocities
+#-t nvt.cpt 
+gmx grompp -f mdp/npt.mdp -c nvt.gro -r nvt.gro -p topol.top -t nvt.cpt -o npt.tpr
 # Checkpoint holds - thermostat/barostat variables, random number states and NMR time averaged data.
-# Only used for restarting if hardware/software prematurely terminates
-# Cant use the checkpoint from nvt to continue npt equilibration
-gmx mdrun -cpi nvt.cpt -append -cpt 5 -s npt.tpr -deffnm npt
+# Only used for velocities
+# Cant use the checkpoint for some reason
+gmx mdrun -cpt 5 -s npt.tpr -deffnm npt
