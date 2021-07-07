@@ -10,7 +10,7 @@ nstvout		= 5000		; save velocities every 10.0 ps
 nstenergy	= 5000		; save energies every 10.0 ps
 nstlog		= 5000		; update log file every 10.0 ps
 ; Bond parameters
-continuation	        = no		; Restarting after NVT 
+continuation	        = yes		; Restarting after NVT 
 constraint_algorithm    = lincs	    ; holonomic constraints 
 constraints	            = h-bonds	; All bonds involving hydrogen atoms constrained
 lincs_iter	            = 1		    ; accuracy of LINCS
