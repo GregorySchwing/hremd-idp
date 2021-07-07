@@ -29,9 +29,7 @@ fourierspacing	= 0.16		; grid spacing for FFT
 tcoupl		= V-rescale	            ; velocity-rescaling thermostat
 tc-grps		= Protein Non-Protein	; two coupling groups - more accurate
 tau_t		= 0.1	  0.1	        ; time constant, in ps
-# Needs to match the temperatures measured at the
-experiments - TODO Check
-# 
+; Needs to match the temperatures measured at the experiments - TODO Check
 ref_t		= 293 	  293	        ; reference temperature, one for each group, in K
 ; Pressure coupling is on
 pcoupl		        = Parrinello-Rahman	    ; Pressure coupling on in NPT
