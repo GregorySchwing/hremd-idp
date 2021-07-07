@@ -8,4 +8,4 @@
 
 ####Generate a gromacs tpr for production run.
 gmx grompp -f mdp/md.mdp -c npt.gro -t npt.cpt -p topol.top -o md.tpr
-gmx mdrun -v -cpt 5 -s npt.tpr -deffnm npt
+gmx mdrun -cpt 5 -s npt.tpr -deffnm npt

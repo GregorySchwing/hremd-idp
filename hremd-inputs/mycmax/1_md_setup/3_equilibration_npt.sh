@@ -11,4 +11,4 @@ gmx grompp -f mdp/npt.mdp -c nvt.gro -r nvt.gro -p topol.top -o npt.tpr
 # Checkpoint holds - thermostat/barostat variables, random number states and NMR time averaged data.
 # Only used for restarting if hardware/software prematurely terminates
 # Cant use the checkpoint from nvt to continue npt equilibration
-gmx mdrun -v -cpt 5 -s npt.tpr -deffnm npt
+gmx mdrun -cpt 5 -s npt.tpr -deffnm npt
