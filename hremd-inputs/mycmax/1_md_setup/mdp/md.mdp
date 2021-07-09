@@ -2,7 +2,7 @@ title		= MD simulation
 ; Run parameters
 integrator	= md		; leap-frog integrator
 tinit 		= 0
-nsteps		= 5000	; (10,000 ns)
+nsteps		= 5000000000	; (10,000 ns)
 dt		    = 0.002		; 2 fs
 ; Output control
 nstxout		        = 5000		; save coordinates every 10.0 ps
