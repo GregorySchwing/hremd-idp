@@ -1,7 +1,9 @@
 title		= NPT equilibration 
 define		= -DPOSRES	; position restrain the protein
 ; Run parameters
-integrator	= md		; leap-frog integrator
+integrator  = sd        ; Langevin thermostat
+; mittal used Langevin which is the stoachastic dynamical integrator
+;integrator	= md		; leap-frog integrator
 nsteps		= 50000	; 2 * 50000 = 100 ps
 dt		    = 0.002		; 2 fs
 ; Output control
@@ -29,7 +31,8 @@ fourierspacing	= 0.16		; grid spacing for FFT
 tcoupl		= V-rescale	            ; velocity-rescaling thermostat
 ld-seed     = 456
 tc-grps		= Protein Non-Protein	; two coupling groups - more accurate
-tau_t		= 0.1	  0.1	        ; time constant, in ps
+tau_t		= 1.0	  1.0	        ; mittal used sd, which treats tau_t 
+                                    ; as the inverse friction 1/ps
 ; Needs to match the temperatures measured at the experiments - TODO Check
 ref_t		= ZZZ 	  ZZZ	        ; reference temperature, one for each group, in K
 ; Pressure coupling is on
