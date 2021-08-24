@@ -4,13 +4,13 @@ define		= -DPOSRES	; position restrain the protein
 integrator  = sd        ; Langevin thermostat
 ; mittal used Langevin which is the stoachastic dynamical integrator
 ;integrator	= md		; leap-frog integrator
-nsteps		= 50000	; 2 * 50000 = 100 ps
+nsteps		= 500	; 2 * 50000 = 100 ps
 dt		    = 0.002		; 2 fs
 ; Output control
-nstxout		= 5000		; save coordinates every 10.0 ps
-nstvout		= 5000		; save velocities every 10.0 ps
-nstenergy	= 5000		; save energies every 10.0 ps
-nstlog		= 5000		; update log file every 10.0 ps
+nstxout		= 500		; save coordinates every 10.0 ps
+nstvout		= 500		; save velocities every 10.0 ps
+nstenergy	= 500		; save energies every 10.0 ps
+nstlog		= 500		; update log file every 10.0 ps
 ; Bond parameters
 continuation	        = yes		; Restarting after NVT 
 constraint_algorithm    = lincs	    ; holonomic constraints 
